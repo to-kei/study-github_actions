@@ -1,0 +1,11 @@
+name: 'sample'
+description: 'sample'
+
+inputs:
+  params1:
+    description: 'params1'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
