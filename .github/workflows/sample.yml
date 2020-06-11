@@ -7,14 +7,7 @@ jobs:
   sample:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.1.0
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.6.x
-      - run: |
-          ruby -v
-          ruby -e 'puts Time.now'
-      - name: uses sample
-        uses: ./.github/actions/sample
-        with:
-          params1: 'value1'
+      - uses: actions/checkout@v2
+      - uses: bluerabbit/actions/bin/assign@v0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
